@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service page</title>
+    {% load static %}
+    <style>
+       *{
+		margin: none;
+		padding:none;
+		font-family: sans-serif;
+		border:none;
+		}
+		.container{
+		margin: 10px;
+		width: 900px;
+		height: 1500px;
+		background-color: none;
+		}
+        .opt{
+       width: 250px;
+       height: 510p;
+       background-color: none;
+       margin: 10px;
+       border-radius: 20px;
+       border:none;
+       }
+       .opt head{
+       padding: 4px;
+       font-weight: bold;
+       font-size: 16px;
+       letter-spacing: 2px;
+       color:black;
+       }
+       mark {
+       background-color: white;
+       font-weight: bold;
+       color:#FF0000;
+       }
+       span a{
+       margin:5px;
+       padding: 2px;
+       text-decoration:none;
+       font-weight:bold;
+       }
+         img:hover{
+         transition: 0.2s;
+         aspect-ratio:1/1;
+         object-fit: cover;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span><a href="http://127.0.0.1:8000/">Home</a><a href="http://127.0.0.1:8000/product.html/">Products</a><a href="http://127.0.0.1:8000/contact.html/">Contact us</a></span>
+        <div class="opt">
+           <img src="{% static '/services/quality.png'%}" alt="car quality" width="350px" height="300px">
+				<p class="head"><mark>Quality</mark><br>Inspected across 140 parameters and refurbished by auto-experts, our cars are ready for the road.</p>
+        </div>
+        <div>
+            <img src="{% static 'services/finance.png'%}" alt="car finance" width="350px" height="300px">
+                <p class="head"><mark>Finance</mark><br>Become eligible for Zero Down Payment via EMIs of up to 72 months and instant loans.</p>
+        </div>
+        <div>
+           <img src="{% static 'services/return.png'%}" alt="car return" width="350px" height="300px">
+                <p class="head"><mark>Easy Return</mark><br>Love it, keep it. Changed your mind? Return it within 7 days for a full refund.</p>
+        </div>
+        <div>
+          <img src="{% static 'services/warranty.png'%}" alt="car warranty" width="350px" height="300px">
+                <p class="head"><mark>Warranty</mark><br>Enjoy peace of mind with our 12 month Warranty that is standard<br> across all cars that we sell.</p>
+        </div>
+    </div>
+</body>
+</html>

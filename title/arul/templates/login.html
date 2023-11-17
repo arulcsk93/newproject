@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    {% load static %}
+    <style>
+        *{
+        font-family: sans-serif;
+        background-color: grey;
+        }
+        .container{
+        width: 400px;
+        height: 500px;
+        margin: 15px;
+        padding: 10px;
+        background-color:none;
+        }
+        .logform{
+        width: 350px;
+        height: 450px;
+        background-color:grey;
+        margin: 15px;
+        padding: 5px;
+        }
+        .login{
+        width: 200px;
+        height: 30px;
+        background-color: none;
+        text-align: center;
+        color: blue;
+        font-size: 20px;
+        margin: 30px;
+        padding: 5px;
+        font-weight: bold;
+        }
+        label{
+        width: 250px;
+        height: 120px;
+        background-color: none;
+        color: white;
+        border-radius: 5px;
+        border:none;
+        letter-spacing:2px;
+        margin: 7px;
+        padding: 10px;
+        font-size: 16px;
+        }
+        input{
+        width: 200px;
+        height: 20px;
+        background-color: white;
+        color: black;
+        font-spacing:3px;
+        font-weight: bold;
+        border-radius: 10px;
+        border:none;
+        margin: 5px;
+        padding: 5px;
+        font-size: 13px;
+        }
+        button{
+        width: 284px;
+        height: 35px;
+        background-color: green;
+        color: white;
+        border-radius: 15px;
+        letter-spacing:1px;
+        margin: 20px;
+        padding: 10px;
+        font-size:15px;
+        border:none;
+        }
+        button:hover{
+        background-color:blue;
+        }
+        .logform a{
+        padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <form class="logform" action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+            <label class="login">Login your account</label><br><br><br>
+
+            <label for="name" class="label">Name</label>
+            <input type="text" class="name" id="name" name="Name" required="required" autocomplete="off"/><br><br><br>
+
+            <label for="mobile" class="label">Mobile</label>
+            <input type="password" class="mobile" id="mobile" name="Mobile" required="required" autocomplete="off"/><br><br><br>
+
+            <button class="btn"  type="submit" onclick="onClick()">Submit</button><br>
+
+            <div id="msg"></div><br><br>
+
+            <a class="btn" href="http://127.0.0.1:8000/product.html">Product</a>
+        </form>
+    </div>
+</body>
+<script>
+    function onClick(){
+    let message = ("Login Successfully!")
+    document.getElementById("msg").innerHTML = message;
+    }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <center><h2><b>Registration details </b></h2></center>
+  <table class="table table-bordered">
+    <thead>
+      <tr bgcolor="blue">
+        <th>Name</th>
+        <th>Mobile </th>
+      </tr>
+    </thead>
+    {% if key1 %}
+    <tbody>
+        {% for i in key1 %}
+          <tr bgcolor="yellow">
+            <td>{{i.Name}}</td>
+            <td>{{i.Mobile}}</td>
+          </tr>
+        {% endfor %}
+    </tbody>
+    {% endif %}
+  </table><br><br>
+            <a class="btn" href="http://127.0.0.1:8000/login.html">Login</a><br><br>
+            <a class="btn" href="http://127.0.0.1:8000/">Home</a>
+</div>
+
+</body>
+</html>

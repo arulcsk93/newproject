@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    {% load static %}
+    <style>
+		*{
+		margin: none;
+		padding:none;
+		font-family: sans-serif;
+		background-size:cover;
+		background-color:#FFFFFF;
+		border:none;
+		}
+		body{
+		background-image:url"{% static 'backgrounds/1838893.jpg' %}"alt="car image">
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		background-position:center;
+		}
+		.header{
+		width: 100%;
+		height: 60px;
+		background-color:black;
+		position:relative;
+		display:flex;
+		padding: 2px;
+		border:none;
+		}
+		.header {
+        position: sticky;
+        top: 0px;
+        }
+		.logo{
+		width: 100px;
+		height: 60px;
+		float:left;
+		margin:0px;
+		background-color:black;
+		}
+		.logo img{
+		width: 100px;
+		height: 60px;
+		border:none;
+		margin:none;
+		}
+		.logo img:hover{
+		border-radius: 30px;
+		background-color:white;
+		}
+		.menu{
+		width: 700px;
+		height: 50px;
+		padding:5px;
+		background-color:black;
+		color:white;
+		}
+		.menu ul{
+		background-color:black;
+		}
+		.menu ul li{
+		display: inline;
+		padding:7px;
+		background-color:black;
+		color:white;
+		}
+		a{
+		text-decoration:none;
+		letter-spacing:2px;
+		padding:7px;
+		font-size:13px;
+		border-radius: 7px;
+		background-color:grey;
+		color:white;
+		}
+		a:hover{
+
+		}
+		.user{
+		width: 521px;
+		height: 55px;
+		float:right;
+		position:relative;
+		padding:2px;
+		background-color:black;
+		}
+		.btn{
+		margin-top:10px;
+		margin-left:60px;
+		padding:7px;
+		right:6px;
+		letter-spacing:2px;
+		font-size:13px;
+		border:none;
+		background-color:black;
+		font-family: sans-serif;
+		color:white;
+		}
+		a:hover{
+		background-color:blue;
+		color:white;
+		}
+		.container{
+		width: 100%;
+        height: 1000px;
+        background-color:#FFFFFF;
+        margin: 0px;
+        }
+        .slide-image img{
+        margin:0px;
+        height:450px;
+        background-position: center;
+        background-position: cover;
+        border-color:white;
+        background-color:#FFFFFF;
+        border-radius: none;
+        }
+       .mission{
+       width: 90%;
+       height: 400px;
+       background-color: #FFFFFF;
+       margin-left: 80px;
+       display: flex;
+       padding: 10px;
+       border:none;
+       }
+	   .opt{
+       width: 250px;
+       height: 510p;
+       background-color: none;
+       margin: 10px;
+       border-radius: 20px;
+       border:none;
+       }
+       .opt head{
+       padding: 4px;
+       font-weight: bold;
+       font-size: 16px;
+       letter-spacing: 2px;
+       color:black;
+       }
+       mark{
+       background-color: none;
+       font-weight: bold;
+       color:#FF0000;
+       }
+       .footer{
+       	background-color:black;
+		margin:0px;
+		width: 100%;
+		height: 190px;
+		display:flex;
+		}
+		.left{
+		background-color:black;
+		width: 500px;
+		height:auto;
+		float:left;
+		margin:10px;
+		color:#FF0099;
+		}
+		.left h3{
+		color:#FF0000;
+		background-color:black;
+		}
+		#address {
+		padding: 10px;
+		letter-spacing:2px;
+		font-size: 14px;
+		color:#FFFFFF;
+		background-color:black;
+		}
+		.right{
+		background-color:black;
+		width: 500px;
+		height:auto;
+		float:right;
+		margin:10px;
+		padding:5px;
+		color:#FF0099;
+		}
+		.right h3{
+		color:#FF0000;
+		background-color:black;
+		}
+		.media{
+		background-color:black;
+		}
+		.right img{
+		width: 20px;
+		height: 15px;
+		display:inline;
+		border-radius: 6px;
+		padding:4px;
+		background-color:black;
+		}
+		.bottom-link{
+		background-color:black;
+		width:100%;
+		height: 39px;
+		position:absolute;
+		padding: 7px;
+		border: 1px solid grey;
+		}
+		.bottom-link a{
+		margin:10px;
+		padding:4px;
+		font-size:13px;
+		background-color:black;
+		color:white;
+		}
+		.bottom-link a:hover{
+		background-color:blue;
+		color:white;
+		border-radius: 3px;
+		}
+		marquee{
+		margin:0px;
+		letter-spacing: 2px;
+		background-color:black;
+		color: white;
+		font-size:13px;
+		}
+		marquee a{
+		background-color:blue;
+		color:white;
+		font-size: 15px;
+		font-weight: bold;
+		}
+		 img:hover{
+         transition: 0.2s;
+         aspect-ratio:1/1;
+         object-fit: cover;
+         }
+	</style>
+</head>
+<body>
+    <div class="header">
+		<div class="logo">
+			<img src="{% static 'car-logo/ak.jpg'%}" alt="ak-logo" />
+		</div>
+		<div class="menu">
+			<ul>
+			<li><a href="http://127.0.0.1:8000/">Home</a></li>
+			<li><a href="http://127.0.0.1:8000/about.html/">About</a></li>
+			<li><a href="http://127.0.0.1:8000/product.html/">Products</a></li>
+			<li><a href="http://127.0.0.1:8000/service.html/">Services</a></li>
+			<li><a href="http://127.0.0.1:8000/contact.html/">Contact us</a></li>
+			</ul>
+		</div>
+		<div class="user">
+			<button class="btn">
+				<a href="http://127.0.0.1:8000/register.html/">Register</a>
+			</button>
+			<button class="btn">
+				<a href="http://127.0.0.1:8000/login.html/">Login</a>
+			</button>
+			<button class="btn">
+				<a href="http://127.0.0.1:8000/user_reg">Reg_details</a>
+			</button>
+		</div>
+	</div>
+	<marquee>Exclusive offers is now ongoing, if you want to know about please <a href="offer.html/">click</a> here...!</marquee>
+
+	<div class="container">
+		<div class="slide-image">
+         	<img src="{% static 'backgrounds/5084449.jpg'%}" alt="car image" width="100%" height="500px"> <br>
+
+		</div>
+         <div class="mission">
+         	<div class="opt">
+             	<img src="{% static '/services/quality.png'%}" alt="car quality" width="250px" height="300px">
+				<p class="head"><mark>Quality</mark><br>Inspected across 140 parameters and refurbished by auto-experts, our cars are ready for the road.</p>
+            </div>
+            <div class="opt">
+            	<img src="{% static 'services/finance.png'%}" alt="car finance" width="250px" height="300px">
+                <p class="head"><mark>Finance</mark><br>Become eligible for Zero Down Payment via EMIs of up to 72 months and instant loans.</p>
+            </div>
+            <div class="opt">
+            	<img src="{% static 'services/return.png'%}" alt="car return" width="250px" height="300px">
+                <p class="head"><mark>Easy Return</mark><br>Love it, keep it. Changed your mind? Return it within 7 days for a full refund.</p>
+            </div>
+            <div class="opt">
+            	<img src="{% static 'services/warranty.png'%}" alt="car warranty" width="250px" height="300px">
+                <p class="head"><mark>Warranty</mark><br>Enjoy peace of mind with our 12 month Warranty that is standard<br> across all cars that we sell.</p>
+            </div>
+          </div>
+        </div>
+	<div class="footer">
+		<div class="left">
+			<h3>Touch us</h3>
+			<p id="address">AK CARS<br />
+			Coimbatore<br />
+			Tamil nadu<br />
+			India<br />
+			Pin-code: 641012<br />
+			Mobile: +91 9597611679.</p>
+		</div>
+		<div class="right">
+			<h3> Follow us on Social media</h3>
+			<div class="media">
+			<img src="{% static 'icons/facebook.png'%}" alt="facebook"/>
+			<img src="{% static 'icons/twitter.png'%}" alt="twitter" />
+			<img src="{% static 'icons/instagram.png'%}" alt="instagram" />
+			<img src="{% static 'icons/youtube.png'%}" alt="youtube" />
+			</div>
+		</div>
+	</div>
+	<div class="bottom-link">
+		<a href="http://127.0.0.1:8000/">Home</a>
+		<a href="http://127.0.0.1:8000/about.html/">About</a>
+		<a href="http://127.0.0.1:8000/service.html/">Service</a>
+		<a href="http://127.0.0.1:8000/contact.html/">Contact us</a>
+		<a href="http://127.0.0.1:8000/enquiry.html/">Enquiry</a>
+	</div>
+<script>
+	let msg = alert("Hi welcome you all ,Please register here !....")
+	let msg1 = prompt("Enter your name here !")
+	pop = alert("welcome"+"   "+msg1)
+</script>
+</body>
+</html>

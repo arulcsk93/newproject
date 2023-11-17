@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Product page</title>
+    {% load static %}
+    <style type="text/css">
+        *{
+        margin: none;
+        font-family: sans-serif;
+        padding: 1px;
+        }
+        body{
+		background-image:url('C:\Users\admin\PycharmProjects\newproject\title\arul\static\backgrounds\1838893.jpg') alt="car image">;
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		background-position:center;
+		}
+        .header{
+		width: 100%;
+		height: 63px;
+		background-color:black;
+		position:relative;
+		display:flex;
+		padding: 2px;
+		}
+		.header {
+        position: sticky;
+        top: 0px;
+        }
+		.logo{
+		width: 100px;
+		height: 60px;
+		float:left;
+		margin:0px;
+		}
+		.logo img{
+		width: 100px;
+		height: 60px;
+		}
+		.menu{
+		width: 700px;
+		height: 80px;
+		padding:10px;
+		}
+		.menu ul li{
+		display: inline;
+		padding:15px;
+		}
+		a{
+		text-decoration:none;
+		letter-spacing:2px;
+		padding:10px;
+		color:white;
+		font-size:13px;
+		}
+		.user{
+		width: 400px;
+		height: 100px;
+		float:right;
+		position:relative;
+		padding:7px;
+		}
+		.btn{
+		margin-top:10px;
+		margin-left:60px;
+		padding:10px;
+		right:10px;
+		letter-spacing:2px;
+		font-size:13px;
+		border:none;
+		background-color:black;
+		font-family: sans-serif;
+		}
+		.btn:hover{
+		background-color:blue;
+		}
+		a:hover{
+		background-color:blue;
+		}
+         .main-container{
+         margin:0px;
+         width: 100%;
+         height: 100%;
+         background-color:none;
+         display: block;
+         padding: 5px;
+         }
+         .sub-container{
+         width: 700px;
+         height: 250px;
+         background-color: none;
+         margin: 10px;
+         display:flex;
+         }
+         .slide{
+         margin:10px;
+         width: 1230px;
+         height: 280px;
+         background-color:none;
+         }
+         .imagebox{
+         width: 250px;
+         height: 200px;
+         margin: 20px;
+         border-radius: 10px;
+         display: flex;
+         background-color:none;
+         background-position:center;
+         }
+         .imagebox img{
+         width: 250px;
+         height: 200px;
+         border-radius: 8px;
+         border-box: 1px;
+         background-position:center;
+         }
+         .cart{
+         width: 500px;
+         height: 130px;
+         padding: 35px;
+         top: 15px;
+         right: 10px;
+         margin:10px;
+         background-color:none;
+
+         }
+         .click{
+         color: white;
+         width: 100px;
+         height: 30px;
+         background-color:blue;
+         padding:6px;
+         letter-spacing: 1px;
+         border-radius: 2px;
+         text-transform:capitalize;
+         }
+         .click:hover{
+         background-color:red;
+         color:#FFFFFF;
+         letter-spacing: 1px;
+         }
+         .name{
+         width:60px;
+         height: 50px;
+         color:#FF0033;
+         padding: 7px;
+         letter-spacing: 1px;
+         font-size: 25px;
+         font-weight:100;
+         text-transform:capitalize;
+         }
+         .price{
+         width:70px;
+         height: 40px;
+         color:#000099;
+         padding: 7px;
+         letter-spacing: 1px;
+         font-size: 15px;
+         font-weight:100;
+         text-transform:capitalize;
+         }
+         .footer{
+         width: 100%;
+         height: 40px;
+         background-color: black;
+         }
+         img:hover{
+         transition: 0.2s;
+         aspect-ratio:1/1;
+         object-fit: cover;
+         }
+    </style>
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<img src="{% static 'car-logo/ak.jpg'%}" alt="ak-logo" />
+		</div>
+		<div class="menu">
+			<ul>
+			<li><a href="http://127.0.0.1:8000/">Home</a></li>
+			<li><a href="#">Brands</a></li>
+			<li><a href="#">Compare</a></li>
+			<li><a href="http://127.0.0.1:8000/service.html/">Services</a></li>
+			<li><a href="https://auto.economictimes.indiatimes.com/tag/automation" target="_blank">Read news</a></li>
+			</ul>
+		</div>
+		<div class="user">
+			<button class="btn">
+				<a href="http://127.0.0.1:8000/offer.html/">Offers</a>
+			</button>
+			<button class="btn">
+				<a href="#">Emi</a>
+			</button>
+		</div>
+	</div>
+	<div class="main-container">
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/audi/audi-q3.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">audi-q3</label><br /><br />
+					<label class="price">44.89 lakh onwards.<br></label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/audi/audi-q3-sportback.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">audi-q3-sportback</label><br /><br />
+					<label class="price">51.43 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/audi/audi-s5-sportback2.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">audi-s5-sportback2</label><br /><br />
+					<label class="price">84.23 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/bmw/bmw-m2-20231.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">bmw-m2-20231</label><br /><br />
+					<label class="price">98 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/bmw/bmw-xm.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">bmw-xm</label><br /><br />
+					<label class="price">2.6 Crore onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/bmw/bmw-z4.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">bmw-z4</label><br /><br />
+					<label class="price">89.3 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/hyundai/hyundai-creta.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">hyundai-creta</label><br /><br />
+					<label class="price">10.84 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/hyundai/hyundai-grand-i10-nios.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">hyundai-grand-i10-nios</label><br /><br />
+					<label class="price">5.69 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/hyundai/hyundai-venue.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">hyundai-venue</label><br /><br />
+					<label class="price">7.68 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/mahindra/mahindra-bolero-neo.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">mahindra-bolero-neo</label><br /><br />
+					<label class="price">9.48 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/mahindra/mahindra-scorpio-n.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">mahindra-scorpio-n</label><br /><br />
+					<label class="price">13.05 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/mahindra/mahindra-thar2.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">mahindra-thar2</label><br /><br />
+					<label class="price">13.59 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/maruti suzuki/maruti-dzire-front-c1f6_wm.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">maruti-dzire-front-c1f6_wm</label><br /><br />
+					<label class="price">7.46 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/maruti suzuki/maruti-suzuki-alto.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">maruti-suzuki-alto</label><br /><br />
+					<label class="price">3.39 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/maruti suzuki/maruti-suzuki-swift.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">maruti-suzuki-swift</label><br /><br />
+					<label class="price">5.92 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/maruti suzuki/maruti-suzuki-wagon-r.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">maruti-suzuki-wagon-r</label><br /><br />
+					<label class="price">5.48 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/tata/tata-nexon-ev-prime.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">tata-nexon-ev-prime</label><br /><br />
+					<label class="price">14.99 lakh onwards. </label><br /><br />
+					<button class="click">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/tata/tata-punch.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">tata-punch</label><br /><br />
+					<label class="price">6 lakh onwards. </label><br /><br />
+					<button onclick="cartInfo()" class="click">Add to cart</button>
+
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="sub-container">
+				<div class="imagebox">
+					<img src="{% static 'cars-brands/tata/tata-safari.jpg' %}" alt="car image">
+				</div>
+				<div class="cart">
+					<label class="name">tata-safari</label><br /><br />
+					<label class="price">15.65 lakes onwards. </label><br /><br />
+					<button onclick="cartInfo()" class="click">Add to cart</button><br>
+					<div id="cart"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+</body>
+</html>
